@@ -1,6 +1,0 @@
-prerender:
-    image: cerisier/prerender
-    ports:
-        - "4000:3000" 
-    restart: always #auto start prerender after reboot.
-#replace 4000 with the desired port for the prerender app
