@@ -16,6 +16,7 @@ export function* requestUser() {
   }
 }
 
+
 export function* getNearestAppointment() {
     try {
       const { data } = yield call(() => api.Patients.get());
