@@ -7,20 +7,24 @@
     "express": "^4.16.4",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^7.0.2",
+    "next-images": "^1.0.1",
+    "next-redux-wrapper": "^2.0.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-markdown": "^4.0.3",
     "react-redux": "^5.1.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
     "redux": "^4.0.1",
     "redux-saga": "^0.16.2",
-    "styled-components": "^4.1.1"
+    "styled-components": "^4.1.2"
   },
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "export": "next export"
   },
   "eslintConfig": {
     "extends": "react-app"

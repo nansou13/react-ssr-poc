@@ -1,6 +1,8 @@
 import Layout from '../components/MyLayout.js'
 import Link from 'next/link'
-import fetch from 'isomorphic-unfetch'
+import api from '../api';
+import {compose} from 'redux'
+import { connect } from 'react-redux';
 
 const Index = (props) => (
     <Layout>
@@ -39,17 +41,26 @@ const Index = (props) => (
     `}</style>
     </Layout>
   )
+
   Index.getInitialProps = async function() {
-    const res = await fetch('https://api.tvmaze.com/search/shows?q=batman')
-    const data = await res.json()
+    // const res = await fetch('https://api.tvmaze.com/search/shows?q=batman')
+    const {data} = await api.Demo.get()
+    
+    // const data = await res.json()
   
-    console.log(`Show data fetched. Count: ${data.length}`)
+    // console.log(`Show data fetched. Count: ${data.length}`)
   
     return {
       shows: data
     }
   }
   
-  export default Index
+  // export default Index
 
-  
+const mapStateToProps = () => ({})
+const mapDispatchToProps = () => ({})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Index);

@@ -1,0 +1,2 @@
+export const APP_LOAD = 'app/APP_LOAD';
+export const RESOLVE_APPOINTMENT_NEAREST = 'app/RESOLVE_APPOINTMENT_NEAREST';
